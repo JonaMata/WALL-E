@@ -1,0 +1,11 @@
+[Unit]
+Description=LED-Matrix service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=python3.10 /home/jonathan/MusicMatrix/framework.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+    <title>LED Matrix</title>
+</head>
+<body>
+<h1>Choose app:</h1>
+<ul>
+    <li><a href="{{ url_for('off')}}">Off</a></li>
+    {% for app in apps %}
+        <li><a href="{{ url_for('switch_route', app_id=app) }}">{{ app }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
