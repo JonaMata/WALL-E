@@ -1,8 +1,8 @@
 cp ./asound.conf /etc/asound.conf
-sed -n -i -e 's/defaults.ctl.card 0/defaults.ctl.card 1/g' \
+sed -i -e 's/defaults.ctl.card 0/defaults.ctl.card 1/g' \
 -e 's/defaults.pcm.card 0/defaults.pcm.card 1/g' \
 -e 's/pcm.front cards.pcm.front/#pcm.front cards.pcm.front/g' \
--e 's/dpcm.rear cards.pcm.rear/#pcm.rear cards.pcm.rear/g' \
+-e 's/pcm.rear cards.pcm.rear/#pcm.rear cards.pcm.rear/g' \
 -e 's/pcm.center_lfe cards.pcm.center_lfe/#pcm.center_lfe cards.pcm.center_lfe/g' \
 -e 's/pcm.side cards.pcm.side/#pcm.side cards.pcm.side/g' \
 -e 's/pcm.surround21 cards.pcm.surround21/#pcm.surround21 cards.pcm.surround21/g' \

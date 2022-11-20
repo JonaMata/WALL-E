@@ -19,6 +19,8 @@ current_app = None
 
 def switch_app(app):
     global current_app
+    if app and isinstance(current_app, app):
+        return
     if current_app:
         current_app.exit()
         del current_app
@@ -33,7 +35,7 @@ web = Flask(__name__)
 
 @web.route('/')
 def index():
-    return render_template('index.html', apps=range(len(apps)))
+    return render_template('index.html', apps=apps)
 
 
 @web.route('/off')

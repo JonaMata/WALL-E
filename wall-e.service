@@ -1,10 +1,10 @@
 [Unit]
-Description=LED-Matrix service
+Description=WALL-E service
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=python3.10 /home/jonathan/MusicMatrix/framework.py
+ExecStart=python3.10 /home/jonathan/WALL-E/framework.py
 Restart=on-failure
 
 [Install]

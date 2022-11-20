@@ -2,14 +2,47 @@
 <html>
 <head>
     <title>LED Matrix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<style>
+    html {
+        font-family: sans-serif;
+    }
+    .container {
+        width: fit-content;
+        margin: 0 auto;
+        align-items: center;
+        background: darkgray;
+        border-radius: 5px;
+        padding: 5px 20px;
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .controls a {
+        width: auto;
+        margin: 10px;
+        background: blue;
+        color: white;
+        font-size: 1.5em;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+    }
+</style>
 <body>
-<h1>Choose app:</h1>
-<ul>
-    <li><a href="{{ url_for('off')}}">Off</a></li>
-    {% for app in apps %}
-        <li><a href="{{ url_for('switch_route', app_id=app) }}">{{ app }}</a></li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <h1>WALL-E Controller</h1>
+    <div class="controls">
+        <a href="{{ url_for('off') }}">Off</a>
+    <h2>Apps</h2>
+        {% for app in apps %}
+            <a href="{{ url_for('switch_route', app_id=loop.index-1) }}">{{ app.name }}</a>
+        {% endfor %}
+    </div>
+</div>
 </body>
 </html>

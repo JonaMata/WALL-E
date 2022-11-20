@@ -58,6 +58,8 @@ def wheel(pos):
 
 
 class MusicApp(BaseApp):
+    name = 'Music Visualizer'
+
     def __init__(self, matrix):
         super().__init__(matrix)
 
@@ -66,7 +68,7 @@ class MusicApp(BaseApp):
         self.prev_state = [0 for _ in range(bars)]
         self.offset = 0
         self.mes_vals = [1 for _ in range(bars)]
-        self.prev_max = []
+        self.prev_max = [1]
         self.prev_beat = 0
         self.low_freq_avg_list = []
 
