@@ -11,7 +11,7 @@ class Matrix(BaseMatrix):
 
         pygame.init()
         self.surface = pygame.display.set_mode((self.WIDTH * self.PIX_SIZE, self.HEIGHT * self.PIX_SIZE))
-        self.pixels = [[TestPixel((x, y), self.PIX_SIZE) for y in range(self.HEIGHT, 0, -1)] for x in range(self.WIDTH)]
+        self.pixels = [[TestPixel((x, y), self.PIX_SIZE) for y in range(self.HEIGHT-1, -1, -1)] for x in range(self.WIDTH)]
 
     def display(self):
         self.surface.fill((0, 0, 0))

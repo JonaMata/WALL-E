@@ -1,0 +1,13 @@
+{
+    "background_color": "blue",
+    "display": "fullscreen",
+    "name": "WALL-E",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/static/icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

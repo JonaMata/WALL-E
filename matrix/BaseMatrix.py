@@ -15,5 +15,8 @@ class BaseMatrix:
             for y in range(self.HEIGHT):
                 self.set_pixel(x, y, color)
 
+    def clear(self):
+        self.fill((0, 0, 0))
+
     def run(self):
         self.display()
